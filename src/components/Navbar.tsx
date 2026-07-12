@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Container, PrimaryButton, Reveal } from "./ui";
+import { PrimaryButton, Reveal } from "./ui";
 
 const links = [
   { label: "Programme", href: "#programme" },
@@ -10,10 +10,10 @@ const links = [
 
 export function Navbar() {
   return (
-    <header className="sticky top-4 z-50 px-4">
+    <header className="sticky top-4 z-50">
       <Reveal variant="fade" y={0}>
-        <Container>
-          <div className="flex items-center justify-between rounded-full border border-navy/10 bg-white/90 px-5 py-3 shadow-sm backdrop-blur">
+        <div className="mx-auto w-full max-w-6xl px-3 sm:px-6">
+          <div className="flex items-center justify-between rounded-full border border-navy/10 bg-white/90 px-4 py-3 shadow-sm backdrop-blur sm:px-5">
             <Link href="#top" className="font-display text-xl tracking-tight text-navy">
               DIA<span className="text-indigo">.</span>
             </Link>
@@ -26,7 +26,7 @@ export function Navbar() {
             </nav>
             <PrimaryButton className="!py-2.5 !px-5 text-xs">Postuler</PrimaryButton>
           </div>
-        </Container>
+        </div>
       </Reveal>
     </header>
   );
